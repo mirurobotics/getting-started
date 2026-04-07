@@ -1,4 +1,4 @@
-@miru(config_type="planning")
+@miru(config_type="planning",instance_filepath="planning.json")
 {
 	planning_frequency_hz: number & >=1.0 & <=100.0 | *20.0
 	control_frequency_hz: number & >=10.0 & <=200.0 | *50.0
