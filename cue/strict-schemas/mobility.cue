@@ -1,4 +1,4 @@
-@miru(config_type="mobility")
+@miru(config_type="mobility",instance_filepath="mobility.json")
 {
 	max_linear_speed_mps: number & >=0.1 & <=5.0 | *1.2
 	max_angular_speed_radps: number & >=0.1 & <=3.0 | *1.0
