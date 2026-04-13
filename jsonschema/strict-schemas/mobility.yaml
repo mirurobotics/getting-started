@@ -1,5 +1,5 @@
 x-miru-config-type: "mobility"
-x-miru-instance-filepath: "mobility.json"
+x-miru-instance-filepath: "/srv/miru/configs/mobility.json"
 $schema: "http://json-schema.org/draft/2020-12/schema"
 type: object
 properties:
