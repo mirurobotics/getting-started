@@ -1,0 +1,10 @@
+collection_slug: quickstart-logs
+
+source:
+  glob: /srv/miru/uploadrules/quickstart/*
+  stability_window_secs: 30
+
+destination:
+  bucket: miru-test-bucket-75
+  path: quickstart/{device_name}/{upload_id}/{file_name}
+  delete_policy: never
