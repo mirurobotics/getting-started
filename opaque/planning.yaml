@@ -1,0 +1,4 @@
+language: "opaque"
+config_type: "planning"
+instance_filepath: "/srv/miru/configs/planning.conf"
+instance_format: "text"

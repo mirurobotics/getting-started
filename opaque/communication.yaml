@@ -1,0 +1,3 @@
+language: "opaque"
+config_type: "communication"
+instance_filepath: "/srv/miru/configs/communication.json"

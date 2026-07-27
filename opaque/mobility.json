@@ -1,0 +1,5 @@
+{
+	"language": "opaque",
+	"config_type": "mobility",
+	"instance_filepath": "/srv/miru/configs/mobility.xml"
+}
