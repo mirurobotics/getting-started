@@ -1,0 +1,38 @@
+{
+  "max_linear_speed_mps": 9.9,
+  "max_angular_speed_radps": 1.0,
+  "wheel_count": 1,
+  "obstacle_avoidance_enabled": true,
+  "navigation_mode": "turbo",
+  "robot_id": "X",
+  "firmware_version": "1.4.2",
+  "operator_email": "ops@miruml.com",
+  "site_id": "site-042",
+  "patrol_route": [
+    "dock",
+    "aisle-1",
+    "aisle-2"
+  ],
+  "imu_offset_m": [
+    0.0,
+    0.0,
+    0.12
+  ],
+  "telemetry": {
+    "upload_interval_sec": 0,
+    "heartbeat_interval_sec": 10,
+    "sink": "kafka"
+  },
+  "safety": {
+    "max_payload_kg": 1000,
+    "certification_id": "ISO-3691",
+    "estop": {
+      "timeout_ms": -1,
+      "channels": [
+        "hardware",
+        "software"
+      ]
+    }
+  },
+  "extra_knob": "unexpected"
+}

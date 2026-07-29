@@ -1,0 +1,7 @@
+{
+  "max_linear_speed_mps": 1.2,
+  "max_linear_speed_mps": 99.0,
+  "navigation_mode": "balanced",
+  "operator_email": "ops@miruml.com",
+  "site_id": "site-042"
+}

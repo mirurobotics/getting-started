@@ -1,0 +1,10 @@
+{
+  "max_linear_speed_mps": 1.2,
+  "navigation_mode": "balanced",
+  "operator_email": "ops@miruml.com",
+  "site_id": "site-042",
+  "telemetry": {
+    "upload_interval_sec": 60,
+    "heartbeat_interval_sec": 10,
+  }
+}

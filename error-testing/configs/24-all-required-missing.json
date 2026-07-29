@@ -1,0 +1,34 @@
+{
+  "max_linear_speed_mps": 1.2,
+  "max_angular_speed_radps": 1.0,
+  "wheel_count": 4,
+  "obstacle_avoidance_enabled": true,
+  "navigation_mode": "balanced",
+  "robot_id": "robot-001",
+  "firmware_version": "v1.4.2",
+  "patrol_route": [
+    "dock",
+    "aisle-1",
+    "aisle-2"
+  ],
+  "imu_offset_m": [
+    0.0,
+    0.0,
+    0.12
+  ],
+  "telemetry": {
+    "upload_interval_sec": 60,
+    "heartbeat_interval_sec": 10,
+    "sink": "cloud"
+  },
+  "safety": {
+    "max_payload_kg": 50,
+    "estop": {
+      "timeout_ms": 100,
+      "channels": [
+        "hardware",
+        "software"
+      ]
+    }
+  }
+}
