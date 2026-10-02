@@ -1,0 +1,114 @@
+x-miru-config-type: "communication"
+x-miru-instance-filepath: 'C:\ProgramData\Miru\configs\communication.json'
+$schema: "http://json-schema.org/draft/2020-12/schema"
+type: object
+required:
+  - control_loop_rate_hz
+  - watchdog_timeout_ms
+  - network
+  - logging
+  - error_handling
+properties:
+  control_loop_rate_hz:
+    type: integer
+    description: Control loop frequency in Hertz
+    minimum: 1
+    maximum: 1000  
+    default: 50
+  watchdog_timeout_ms:
+    type: integer
+    description: Watchdog timeout duration in milliseconds
+    minimum: 100   
+    maximum: 5000  
+    default: 500
+  network:
+    type: object
+    required:
+      - max_latency_ms
+      - connection_timeout_ms
+      - reconnect_attempts
+      - reconnect_interval_ms
+      - heartbeat_interval_ms
+    properties:
+      max_latency_ms:
+        type: integer
+        description: Maximum acceptable network latency in milliseconds
+        minimum: 10    
+        maximum: 1000  
+        default: 100
+      connection_timeout_ms:
+        type: integer
+        description: Connection timeout duration in milliseconds
+        minimum: 100    
+        maximum: 10000  
+        default: 2000
+      reconnect_attempts:
+        type: integer
+        description: Number of reconnection attempts
+        minimum: 1
+        maximum: 10    
+        default: 3
+      reconnect_interval_ms:
+        type: integer
+        description: Interval between reconnection attempts in milliseconds
+        minimum: 100    
+        maximum: 5000   
+        default: 1000
+      heartbeat_interval_ms:
+        type: integer
+        description: Interval between heartbeat messages in milliseconds
+        minimum: 50     
+        maximum: 1000   
+        default: 250
+  logging:
+    type: object
+    required:
+      - enable_packet_logging
+      - log_level
+      - max_log_size_mb
+      - retain_logs_days
+    properties:
+      enable_packet_logging:
+        type: boolean
+        description: Enable or disable packet logging
+        default: true
+      log_level:
+        type: string
+        description: Logging level
+        enum: ["debug", "info", "warn", "error"]
+        default: "info"
+      max_log_size_mb:
+        type: integer
+        description: Maximum log file size in megabytes
+        minimum: 1
+        maximum: 1024  
+        default: 100
+      retain_logs_days:
+        type: integer
+        description: Number of days to retain log files
+        minimum: 1
+        maximum: 90    
+        default: 30
+  error_handling:
+    type: object
+    required:
+      - max_consecutive_failures
+      - failure_timeout_ms
+      - enable_auto_recovery
+    properties:
+      max_consecutive_failures:
+        type: integer
+        description: Maximum number of consecutive failures allowed
+        minimum: 1
+        maximum: 20    
+        default: 5
+      failure_timeout_ms:
+        type: integer
+        description: Timeout duration for failure handling in milliseconds
+        minimum: 100    
+        maximum: 30000  
+        default: 5000
+      enable_auto_recovery:
+        type: boolean
+        description: Enable or disable automatic recovery from failures
+        default: true
